@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "services": [
+    {
+      "id": "tazkira",
+      "file": "https://raw.githubusercontent.com/Aliagha-1/data-app/main/tazkira.json"
+    }
+  ]
+}
