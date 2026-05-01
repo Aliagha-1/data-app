@@ -1,60 +1,101 @@
 {
   "id": "tazkira",
-  "version": 1,
-  "title": {
-    "fa": "تذکره",
-    "ps": "تذکره"
-  },
-  "start": "q1",
+  "version": 2,
+  "title": { "fa": "راهنمای دریافت تذکره", "ps": "د تذکره اخیستلو لارښود" },
+  "start_node": "q1",
   "nodes": [
     {
       "id": "q1",
-      "text": {
-        "fa": "آیا از قبل تذکره دارید؟",
-        "ps": "ایا تاسو مخکې تذکره لرله؟"
-      },
+      "text": { "fa": "آیا از قبل تذکره دارید؟", "ps": "آیا له مخکې تذکره لرئ؟" },
+      "type": "radio",
       "options": [
-        {
-          "text": { "fa": "بلی", "ps": "هو" },
-          "next": "result_have"
-        },
-        {
-          "text": { "fa": "نخیر", "ps": "نه" },
-          "next": "result_new"
-        }
+        { "text": { "fa": "بلی", "ps": "هو" }, "next": "q2" },
+        { "text": { "fa": "نخیر", "ps": "نه" }, "next": "result_new" }
+      ]
+    },
+    {
+      "id": "q2",
+      "text": { "fa": "نوع تذکره مورد نظر؟", "ps": "د تذکره ډول؟" },
+      "type": "radio",
+      "options": [
+        { "text": { "fa": "فامیلی", "ps": "کورنۍ" }, "next": "result_family" },
+        { "text": { "fa": "یکتا", "ps": "یو ډوله" }, "next": "result_unique" }
       ]
     }
   ],
   "results": [
     {
       "id": "result_new",
-      "title": {
-        "fa": "مراحل گرفتن تذکره جدید",
-        "ps": "د نوي تذکره اخیستلو مرحلې"
-      },
+      "title": { "fa": "مراحل دریافت تذکره جدید", "ps": "د نوي تذکره اخیستلو مرحلې" },
       "steps": [
-        "رفتن به اداره ثبت احوال",
-        "ارائه مدارک لازم",
-        "ثبت درخواست"
+        { "fa": "مراجعه به اداره ثبت احوال", "ps": "د ثبت احوال ادارې ته مراجعه" },
+        { "fa": "ارائه مدارک شناسایی", "ps": "د هویت اسناد وړاندې کول" },
+        { "fa": "تکمیل فرم درخواست", "ps": "د غوښتنلیک فورم ډکول" },
+        { "fa": "دریافت رسید", "ps": "رسید اخیستل" }
       ],
       "documents": [
-        "عکس",
-        "تاییدیه محل سکونت"
+        { "name": { "fa": "اصل شناسنامه پدر", "ps": "د پلار اصلي تذکره" }, "required": true, "download_url": null },
+        { "name": { "fa": "عکس 4×3 (6 عدد)", "ps": "4×3 انځور (6 عدد)" }, "required": true, "download_url": null },
+        { "name": { "fa": "تاییدیه محل سکونت", "ps": "د استوګنې تاییدیه" }, "required": true, "download_url": "https://raw.githubusercontent.com/Aliagha-1/data-app/forms/residence_form.pdf" }
+      ],
+      "office": {
+        "name": { "fa": "اداره ثبت احوال ولایت کابل", "ps": "د کابل ولایت ثبت احوال اداره" },
+        "address": { "fa": "ناحیه دوم، خیبر سړک، کابل", "ps": "دوهمه ناحیه، خیبر سړک، کابل" },
+        "hours": { "fa": "شنبه تا چهارشنبه ۸ صبح تا ۴ عصر", "ps": "شنبه تر چهارشنبه ۸ سړه نه تر ۴ ماسخیند" },
+        "phone": "+93 78 123 4567",
+        "map_link": "https://maps.google.com/?q=Kabul+Registration+Office"
+      },
+      "online_link": "https://e-services.gov.af/tazkira",
+      "forms": [
+        {
+          "title": { "fa": "فرم درخواست تذکره", "ps": "د تذکره غوښتنلیک فورم" },
+          "url": "https://raw.githubusercontent.com/Aliagha-1/data-app/forms/tazkira_form.pdf",
+          "type": "pdf"
+        }
       ]
     },
     {
-      "id": "result_have",
-      "title": {
-        "fa": "بررسی تذکره موجود",
-        "ps": "د موجوده تذکره ارزونه"
-      },
+      "id": "result_family",
+      "title": { "fa": "مراحل تذکره فامیلی", "ps": "د کورنۍ تذکره مرحلې" },
       "steps": [
-        "بررسی اعتبار",
-        "در صورت نیاز تمدید"
+        { "fa": "مراجعه با کل فامیل", "ps": "د ټولې کورنۍ سره مراجعه" },
+        { "fa": "ارائه مدارک همه اعضا", "ps": "د ټولو غړو اسناد وړاندې کول" }
       ],
       "documents": [
-        "تذکره قبلی"
-      ]
+        { "name": { "fa": "تذکره پدر", "ps": "د پلار تذکره" }, "required": true, "download_url": null },
+        { "name": { "fa": "شناسنامه مادر", "ps": "د مور تذکره" }, "required": true, "download_url": null },
+        { "name": { "fa": "عکس اعضای فامیل", "ps": "د کورنۍ غړو انځورونه" }, "required": true, "download_url": null }
+      ],
+      "office": {
+        "name": { "fa": "اداره ثبت احوال کابل", "ps": "د کابل ثبت احوال اداره" },
+        "address": { "fa": "ناحیه دوم، خیبر سړک", "ps": "دوهمه ناحیه، خیبر سړک" },
+        "hours": { "fa": "شنبه تا چهارشنبه ۸-۴", "ps": "شنبه تر چهارشنبه ۸-۴" },
+        "phone": "+93 78 123 4567",
+        "map_link": "https://maps.google.com/"
+      },
+      "online_link": null,
+      "forms": []
+    },
+    {
+      "id": "result_unique",
+      "title": { "fa": "مراحل تذکره یکتا", "ps": "د یو ډوله تذکره مرحلې" },
+      "steps": [
+        { "fa": "مراجعه انفرادی", "ps": "انفرادي مراجعه" },
+        { "fa": "ارائه مدارک شخصی", "ps": "شخصي اسناد وړاندې کول" }
+      ],
+      "documents": [
+        { "name": { "fa": "اصل تذکره", "ps": "اصلي تذکره" }, "required": true, "download_url": null },
+        { "name": { "fa": "عکس 4×3", "ps": "4×3 انځور" }, "required": true, "download_url": null }
+      ],
+      "office": {
+        "name": { "fa": "اداره ثبت احوال کابل", "ps": "د کابل ثبت احوال اداره" },
+        "address": { "fa": "ناحیه دوم، خیبر سړک", "ps": "دوهمه ناحیه، خیبر سړک" },
+        "hours": { "fa": "شنبه تا چهارشنبه ۸-۴", "ps": "شنبه تر چهارشنبه ۸-۴" },
+        "phone": "+93 78 123 4567",
+        "map_link": "https://maps.google.com/"
+      },
+      "online_link": null,
+      "forms": []
     }
   ]
 }
