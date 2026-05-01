@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "ads": [
+    {
+      "id": "ad_1",
+      "title": { "fa": "خدمات آنلاین ثبت احوال", "ps": "د ثبت احوال آنلاین خدمتونه" },
+      "description": { "fa": "درخواست آنلاین تذکره", "ps": "آنلاین د تذکره غوښتنه" },
+      "image_url": "https://example.com/ad1.jpg",
+      "link": "https://e-services.gov.af",
+      "provinces": { "include": ["کابل", "هرات"], "exclude": [] },
+      "services": { "include": ["tazkira"], "exclude": [] },
+      "position": "result_top",
+      "active": true
+    },
+    {
+      "id": "ad_2",
+      "title": { "fa": "آموزش زبان انگلیسی", "ps": "د انګلیسي ژبې زده کړه" },
+      "description": { "fa": "کلاس‌های آنلاین رایگان", "ps": "وړیا آنلاین ټولګي" },
+      "image_url": "https://example.com/ad2.jpg",
+      "link": "https://example.com/english",
+      "provinces": { "include": ["all"], "exclude": [] },
+      "services": { "include": ["all"], "exclude": [] },
+      "position": "result_bottom",
+      "active": true
+    }
+  ]
+}
