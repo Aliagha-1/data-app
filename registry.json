@@ -1,15 +1,30 @@
 {
-  "version": 1,
+  "version": 2,
+  "last_updated": "2025-05-02",
   "services": [
     {
       "id": "tazkira",
-      "title": { "fa": "تذکره", "ps": "تذکره" },
-      "file_url": "https://raw.githubusercontent.com/Aliagha-1/data-app/main/tazkira.json"
+      "title": { "fa": "📘 تذکره", "ps": "📘 تذکره" },
+      "description": { "fa": "راهنمای دریافت و تمدید تذکره", "ps": "د تذکره اخیستلو او تمدید لارښود" },
+      "icon": "badge",
+      "file_url": "https://raw.githubusercontent.com/Aliagha-1/data-app/main/tazkira.json",
+      "version": 2,
+      "provinces": {
+        "include": ["all"],
+        "exclude": []
+      }
     },
     {
-      "id": "passport", 
-      "title": { "fa": "پاسپورت", "ps": "پاسپورت" },
-      "file_url": "https://raw.githubusercontent.com/Aliagha-1/data-app/main/passport.json"
+      "id": "passport",
+      "title": { "fa": "🛂 پاسپورت", "ps": "🛂 پاسپورت" },
+      "description": { "fa": "راهنمای دریافت پاسپورت", "ps": "د پاسپورت اخیستلو لارښود" },
+      "icon": "passport",
+      "file_url": "https://raw.githubusercontent.com/Aliagha-1/data-app/main/passport.json",
+      "version": 1,
+      "provinces": {
+        "include": ["all"],
+        "exclude": []
+      }
     }
   ]
 }
